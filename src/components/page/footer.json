@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nationlogos": {
+      "displayName": "Nationlogo",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.nationlogo"
+    }
+  }
+}
