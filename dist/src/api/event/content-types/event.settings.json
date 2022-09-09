@@ -1,0 +1,43 @@
+{
+    "kind": "collectionType",
+    "collectionName": "events",
+    "info": {
+        "name": "Event",
+        "description": ""
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "slug": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "content": {
+            "type": "richtext"
+        },
+        "date": {
+            "type": "datetime",
+            "required": true
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "event",
+                "blogpost"
+            ]
+        }
+    }
+}
