@@ -1,27 +1,28 @@
 {
   "collectionName": "components_page_nationlogos",
   "info": {
-    "displayName": "Nationlogo"
+    "displayName": "Nationlogo",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "url": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     }
   }
 }
