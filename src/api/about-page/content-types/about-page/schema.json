@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-page",
     "pluralName": "about-pages",
-    "displayName": "About Page"
+    "displayName": "About Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -47,8 +48,8 @@
           "localized": true
         }
       },
-      "type": "string",
-      "unique": true
+      "type": "uid",
+      "required": true
     }
   }
 }
