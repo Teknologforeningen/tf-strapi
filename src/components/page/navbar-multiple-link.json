@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_navbar_multiple_links",
+  "info": {
+    "displayName": "Navbar Multiple Link",
+    "icon": "layer-group",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.navbar-link",
+      "required": true
+    }
+  }
+}

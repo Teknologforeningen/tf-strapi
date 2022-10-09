@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_navbar_links",
+  "info": {
+    "displayName": "Navbar Link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

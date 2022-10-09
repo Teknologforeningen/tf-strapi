@@ -15,16 +15,6 @@
     }
   },
   "attributes": {
-    "navbar": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "page.navbar"
-    },
     "about_contents": {
       "type": "relation",
       "relation": "oneToMany",
