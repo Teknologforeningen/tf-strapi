@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_sidebars",
+  "info": {
+    "displayName": "Sidebar",
+    "icon": "text-height",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
