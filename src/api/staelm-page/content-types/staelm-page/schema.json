@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "abi_pages",
+  "collectionName": "staelm_pages",
   "info": {
-    "singularName": "abi-page",
-    "pluralName": "abi-pages",
-    "displayName": "ABI Page",
-    "description": ""
+    "singularName": "staelm-page",
+    "pluralName": "staelm-pages",
+    "displayName": "Stälm Page"
   },
   "options": {
     "draftAndPublish": true
@@ -23,8 +22,17 @@
         }
       },
       "type": "string",
-      "required": true,
-      "unique": false
+      "required": true
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     },
     "leftSidebar": {
       "type": "component",
@@ -53,16 +61,6 @@
         }
       },
       "component": "page.sidebar"
-    },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "targetField": "title",
-      "required": true
     }
   }
 }
