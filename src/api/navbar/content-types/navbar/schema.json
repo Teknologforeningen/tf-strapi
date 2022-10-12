@@ -32,6 +32,16 @@
         "page.navbar-multiple-link",
         "page.navbar-link"
       ]
+    },
+    "abi_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::abi-page.abi-page"
+    },
+    "staelm_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::staelm-page.staelm-page"
     }
   }
 }
