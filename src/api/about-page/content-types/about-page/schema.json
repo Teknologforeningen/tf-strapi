@@ -45,12 +45,11 @@
     "slug": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "type": "uid",
-      "required": true,
-      "targetField": "title"
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "staelm-page",
     "pluralName": "staelm-pages",
-    "displayName": "Stälm Page"
+    "displayName": "Stälm Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,16 +23,6 @@
         }
       },
       "type": "string",
-      "required": true
-    },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "targetField": "title",
       "required": true
     },
     "leftSidebar": {
@@ -61,6 +52,15 @@
         }
       },
       "component": "page.sidebar"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }
