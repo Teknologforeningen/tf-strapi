@@ -42,6 +42,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::staelm-page.staelm-page"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }
