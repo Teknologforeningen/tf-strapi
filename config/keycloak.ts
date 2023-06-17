@@ -6,6 +6,15 @@ export default ({ env }) => ({
   userinfoEndpoint: 'https://id.tf.fi/realms/tf-medlemmar/protocol/openid-connect/userinfo',
   logoutEndpoint: 'https://id.tf.fi/realms/tf-medlemmar/protocol/openid-connect/logout',
   redirectUri: 'http://localhost:1337/keycloak/callback',
-  redirectToUrlAfterLogout: "http://localhost:1337",
+  // Homepage
+  redirectToUrlAfterLogin: "http://localhost:3000",
+  redirectToUrlAfterLogout: "http://localhost:3000",
+  permittedOverwriteRedirectUrls: [
+    "http://localhost:1337",
+    "http://localhost:3000",
+    "http://localhost:3000/medlemmar",
+    "https://tf.fi",
+    "https://tf.fi/medlemmar",
+  ],
   debug: true
 });

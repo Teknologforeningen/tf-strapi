@@ -4,5 +4,6 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: env('URL', 'https://cms.tf.fi')
+  url: env('URL', 'https://cms.tf.fi'),
+  proxy: true,
 });
