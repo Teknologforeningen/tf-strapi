@@ -1,11 +1,18 @@
 export default [
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
   'strapi::body',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      headers: '*',
+      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://cms.tf.fi', 'https://tf.fi', 'https://id.tf.fi']
+    }
+  },
   {
     name: 'strapi::session',
     config: {
