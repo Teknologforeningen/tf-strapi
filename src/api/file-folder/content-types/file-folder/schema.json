@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "file_folders",
+  "info": {
+    "singularName": "file-folder",
+    "pluralName": "file-folders",
+    "displayName": "File folder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "folderId": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}
