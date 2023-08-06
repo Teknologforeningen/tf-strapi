@@ -20,7 +20,7 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "text"
     }
   }
