@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "file_folders",
+  "collectionName": "private_folders",
   "info": {
-    "singularName": "file-folder",
-    "pluralName": "file-folders",
-    "displayName": "File folder",
-    "description": ""
+    "singularName": "private-folder",
+    "pluralName": "private-folders",
+    "displayName": "Private folder"
   },
   "options": {
     "draftAndPublish": true
@@ -13,15 +12,14 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "folderId": {
       "type": "string",
       "required": true
     },
     "description": {
-      "type": "text"
+      "type": "string"
     }
   }
 }

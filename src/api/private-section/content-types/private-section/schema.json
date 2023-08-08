@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "content_sections",
+  "collectionName": "private_sections",
   "info": {
-    "singularName": "content-section",
-    "pluralName": "content-sections",
-    "displayName": "Content section",
-    "description": ""
+    "singularName": "private-section",
+    "pluralName": "private-sections",
+    "displayName": "Private section"
   },
   "options": {
     "draftAndPublish": true
@@ -20,17 +19,16 @@
       "type": "richtext",
       "required": false
     },
-    "content_page": {
+    "private_page": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::content-page.content-page",
-      "private": true,
-      "inversedBy": "content_sections"
+      "target": "api::private-page.private-page",
+      "inversedBy": "private_sections"
     },
-    "file_folders": {
+    "private_folders": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::file-folder.file-folder"
+      "target": "api::private-folder.private-folder"
     }
   }
 }

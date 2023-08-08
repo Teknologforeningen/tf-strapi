@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "private_pages",
+  "info": {
+    "singularName": "private-page",
+    "pluralName": "private-pages",
+    "displayName": "Private page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "private_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::private-section.private-section",
+      "mappedBy": "private_page"
+    }
+  }
+}
