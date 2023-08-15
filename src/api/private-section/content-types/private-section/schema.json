@@ -23,9 +23,9 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::private-page.private-page",
-      "inversedBy": "private_sections"
+      "inversedBy": "sections"
     },
-    "private_folders": {
+    "file_folders": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::private-folder.private-folder"

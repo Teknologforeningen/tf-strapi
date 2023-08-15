@@ -25,7 +25,7 @@
       "relation": "manyToOne",
       "target": "api::content-page.content-page",
       "private": true,
-      "inversedBy": "content_sections"
+      "inversedBy": "sections"
     },
     "file_folders": {
       "type": "relation",

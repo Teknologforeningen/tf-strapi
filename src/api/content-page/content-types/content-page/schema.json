@@ -40,7 +40,7 @@
       "target": "api::category.category",
       "inversedBy": "content_pages"
     },
-    "content_sections": {
+    "sections": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::content-section.content-section",

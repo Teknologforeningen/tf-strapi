@@ -23,7 +23,7 @@
     "content": {
       "type": "richtext"
     },
-    "private_sections": {
+    "sections": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::private-section.private-section",
