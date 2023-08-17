@@ -7,13 +7,14 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
-    "@types/koa": "^2.13.5"
+    "@types/koa": "^2.13.5",
+    "patch-package": "^8.0.0"
   },
   "dependencies": {
-    "@hipsquare/strapi-plugin-keycloak": "^1.0.2",
     "@strapi/plugin-i18n": "^4.6.0",
     "@strapi/plugin-users-permissions": "^4.6.0",
     "@strapi/strapi": "^4.6.0",
@@ -26,7 +27,7 @@
     "uuid": "5ff545e9-37bb-4a5b-ba93-c9ba8f13dbc9"
   },
   "engines": {
-    "node": ">=14.19.1 <=16.x.x",
+    "node": ">=14.19.1",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

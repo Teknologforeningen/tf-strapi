@@ -1,0 +1,59 @@
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/bootstrap/grant-config.js b/node_modules/@strapi/plugin-users-permissions/server/bootstrap/grant-config.js
+index 31c612c..0150048 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/bootstrap/grant-config.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/bootstrap/grant-config.js
+@@ -128,4 +128,12 @@ module.exports = (baseURL) => ({
+     callback: `${baseURL}/patreon/callback`,
+     scope: ['identity', 'identity[email]'],
+   },
++  keycloak: {
++    enabled: false,
++    icon: 'key',
++    key: '',
++    secret: '',
++    callback: `${baseURL}/keycloak/callback`,
++    scope: ['email'],
++  },
+ });
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/services/providers-registry.js b/node_modules/@strapi/plugin-users-permissions/server/services/providers-registry.js
+index 875b4e9..919cb86 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/services/providers-registry.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/services/providers-registry.js
+@@ -331,6 +331,24 @@ const getInitialProviders = ({ purest }) => ({
+         };
+       });
+   },
++  async keycloak({ accessToken }) {
++    const keycloak = purest({ provider: 'keycloak' });
++
++    return keycloak
++      .query()
++      .get('userinfo') 
++      .auth(accessToken)
++      .request((err, res, body) => {
++        if (err) {
++          callback(err);
++        } else {
++          callback(null, {
++            username: body.username,
++            email: body.email,
++          });
++        }
++      });
++  }
+ });
+ 
+ module.exports = () => {
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/services/providers.js b/node_modules/@strapi/plugin-users-permissions/server/services/providers.js
+index 1907f88..25749fa 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/services/providers.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/services/providers.js
+@@ -53,7 +53,7 @@ module.exports = ({ strapi }) => {
+     // Get the profile.
+     const profile = await getProfile(provider, query);
+ 
+-    const email = _.toLower(profile.email);
++    const email = _.toLower(profile.body.email);
+ 
+     // We need at least the mail.
+     if (!email) {
