@@ -1,0 +1,28 @@
+diff --git a/node_modules/grant/config/oauth.json b/node_modules/grant/config/oauth.json
+index da4e41b..98f9339 100644
+--- a/node_modules/grant/config/oauth.json
++++ b/node_modules/grant/config/oauth.json
+@@ -569,8 +569,8 @@
+     "oauth": 2
+   },
+   "keycloak": {
+-    "authorize_url": "https://[subdomain]/protocol/openid-connect/auth",
+-    "access_url": "https://[subdomain]/protocol/openid-connect/token",
++    "authorize_url": "https://id.tf.fi/realms/tf-medlemmar/protocol/openid-connect/auth",
++    "access_url": "https://id.tf.fi/realms/tf-medlemmar/protocol/openid-connect/token",
+     "oauth": 2,
+     "scope_delimiter": " "
+   },
+diff --git a/node_modules/grant/config/profile.json b/node_modules/grant/config/profile.json
+index 365ba91..a4872bc 100644
+--- a/node_modules/grant/config/profile.json
++++ b/node_modules/grant/config/profile.json
+@@ -306,7 +306,7 @@
+     "profile_url": "https://kapi.kakao.com/v1/user/me"
+   },
+   "keycloak": {
+-    "profile_url": "https://[subdomain]/protocol/openid-connect/userinfo"
++    "profile_url": "https://id.tf.fi/realms/tf-medlemmar/protocol/openid-connect/userinfo"
+   },
+   "line": {
+     "profile_url": "https://api.line.me/v2/profile"
