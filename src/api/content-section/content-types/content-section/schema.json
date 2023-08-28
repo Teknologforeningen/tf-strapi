@@ -24,13 +24,13 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::content-page.content-page",
-      "private": true,
       "inversedBy": "sections"
     },
     "file_folders": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::file-folder.file-folder"
+      "target": "api::file-folder.file-folder",
+      "mappedBy": "content_section"
     }
   }
 }

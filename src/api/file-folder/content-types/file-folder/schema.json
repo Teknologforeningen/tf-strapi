@@ -27,6 +27,12 @@
       "type": "string",
       "private": true,
       "required": false
+    },
+    "content_section": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::content-section.content-section",
+      "inversedBy": "file_folders"
     }
   }
 }
