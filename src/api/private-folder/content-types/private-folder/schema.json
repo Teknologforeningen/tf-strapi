@@ -4,7 +4,8 @@
   "info": {
     "singularName": "private-folder",
     "pluralName": "private-folders",
-    "displayName": "Private folder"
+    "displayName": "Private folder",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
     },
     "description": {
       "type": "string"
+    },
+    "internalTitle": {
+      "type": "string",
+      "private": true,
+      "required": false
     }
   }
 }

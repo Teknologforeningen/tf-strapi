@@ -22,6 +22,11 @@
     },
     "description": {
       "type": "text"
+    },
+    "internalTitle": {
+      "type": "string",
+      "private": true,
+      "required": false
     }
   }
 }
