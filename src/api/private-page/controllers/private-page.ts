@@ -13,5 +13,14 @@ export default factories.createCoreController(
       sanitizePrivatePages(res?.data);
       return res;
     },
+    async findOne(ctx) {
+      const { id: slug } = ctx.params;
+      const entity = await strapi.db
+        .query("api::private-page.private-page")
+        .findOne({
+          where: { slug },
+        });
+      return this.transformResponse(entity);
+    },
   }
 );
