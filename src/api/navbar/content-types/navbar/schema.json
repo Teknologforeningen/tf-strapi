@@ -47,6 +47,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "private_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::private-page.private-page"
     }
   }
 }
