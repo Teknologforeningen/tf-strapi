@@ -17,7 +17,8 @@
     },
     "slug": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "content_pages": {
       "type": "relation",
