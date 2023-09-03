@@ -29,6 +29,10 @@
       "relation": "oneToMany",
       "target": "api::private-section.private-section",
       "mappedBy": "private_page"
+    },
+    "showTableOfContents": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
