@@ -10,11 +10,6 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
   "attributes": {
     "abouts": {
       "type": "relation",
@@ -22,11 +17,6 @@
       "target": "api::about-page.about-page"
     },
     "links": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "type": "dynamiczone",
       "components": [
         "page.navbar-multiple-link",
