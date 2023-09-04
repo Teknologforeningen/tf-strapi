@@ -21,6 +21,10 @@
       "required": true,
       "unique": true
     },
+    "showTableOfContents": {
+      "type": "boolean",
+      "default": false
+    },
     "content": {
       "type": "richtext"
     },
@@ -29,10 +33,6 @@
       "relation": "oneToMany",
       "target": "api::private-section.private-section",
       "mappedBy": "private_page"
-    },
-    "showTableOfContents": {
-      "type": "boolean",
-      "default": false
     }
   }
 }
