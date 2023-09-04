@@ -22,10 +22,10 @@
     "description": {
       "type": "string"
     },
-    "internalTitle": {
+    "internal_title": {
       "type": "string",
       "private": true,
-      "required": false
+      "required": true
     }
   }
 }

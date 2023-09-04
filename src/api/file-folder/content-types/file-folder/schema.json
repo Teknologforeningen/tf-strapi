@@ -23,10 +23,10 @@
     "description": {
       "type": "text"
     },
-    "internalTitle": {
+    "internal_title": {
       "type": "string",
       "private": true,
-      "required": false
+      "required": true
     },
     "content_section": {
       "type": "relation",
