@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "posts",
   "info": {
-    "name": "Event",
+    "name": "Post",
     "description": ""
   },
   "options": {
@@ -34,10 +34,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "event",
-        "blogpost"
-      ]
+      "enum": ["event", "blogpost"]
     }
   }
 }

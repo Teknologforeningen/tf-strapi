@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "posts",
   "info": {
-    "singularName": "event",
-    "pluralName": "events",
-    "displayName": "Event",
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
     "description": ""
   },
   "options": {
@@ -29,10 +29,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "event",
-        "blogpost"
-      ]
+      "enum": ["event", "blogpost"]
     },
     "slug": {
       "type": "uid",
