@@ -11,27 +11,12 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "abouts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::about-page.about-page"
-    },
     "links": {
       "type": "dynamiczone",
       "components": [
         "page.navbar-multiple-link",
         "page.navbar-link"
       ]
-    },
-    "abi_pages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::abi-page.abi-page"
-    },
-    "staelm_pages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::staelm-page.staelm-page"
     },
     "categories": {
       "type": "relation",
