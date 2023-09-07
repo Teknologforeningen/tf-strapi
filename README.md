@@ -1,57 +1,62 @@
-# 🚀 Getting started with Strapi
+# tf-strapi
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+Strapi application used to manage the content of [tf.fi](https://github.com/Teknologforeningen/tf.fi/).
 
-### `develop`
+## Running the application
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+### Prerequisites
+
+- yarn
+- docker (OR a running postgres database)
+
+### Start the database
+
+The application requires a running postgres database to function. A database can be started by running
 
 ```
-npm run develop
-# or
+docker compose up -d
+```
+
+### Start the application
+
+1. Configure .env variables. Configurable variables can be found in [.env.example](.env.example)
+2. Install dependencies by running
+
+```
+yarn
+```
+
+3. Start the application in development mode with
+
+```
 yarn develop
 ```
 
-### `start`
+## Making changes to the production system
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+1. Clone this repository
+2. Start the application
+3. Navigate to [localhost:1337/admin](http://localhost:1337/admin)
+4. Make the required changes
+5. Double check that the code changes are ok
+6. Commit & push the changes, a github workflow will build a new image
+7. Pull the updated image on the prod system with `docker compose pull`
+8. Start the updated image with `docker compose up -d`
+
+## Loading and exporting settings
+
+**NOTE:** When exporting your strapi config, make sure to remove the `plugin_users-permissions_grant` block, as it contains keycloak secrets.
+
+The current production settings can be found in [strapiconfig.json](strapiconfig.json).
+
+The settings can be loaded by running
 
 ```
-npm run start
-# or
-yarn start
+yarn strapi configuration:restore -f strapiconfig.json
 ```
 
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+After updating the settings, the current configuration can be dumped with
 
 ```
-npm run build
-# or
-yarn build
+yarn strapi configuration:dump
 ```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
