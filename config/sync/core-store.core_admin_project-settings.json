@@ -1,0 +1,18 @@
+{
+  "key": "core_admin_project-settings",
+  "value": {
+    "menuLogo": {
+      "name": "tf_logo_black(1).svg",
+      "hash": "tf_logo_black_1_45dd7fc963",
+      "url": "/uploads/tf_logo_black_1_45dd7fc963.svg",
+      "width": 122,
+      "height": 122,
+      "ext": ".svg",
+      "size": 1.77,
+      "provider": "local"
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

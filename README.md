@@ -45,18 +45,14 @@ yarn develop
 
 ## Loading and exporting settings
 
-**NOTE:** When exporting your strapi config, make sure to remove the `plugin_users-permissions_grant` block, as it contains keycloak secrets.
-
-The current production settings can be found in [strapiconfig.json](strapiconfig.json).
-
-The settings can be loaded by running
+The current production settings can be found in [config/sync](config/sync) and can be loaded by running
 
 ```
-yarn strapi configuration:restore -f strapiconfig.json
+yarn cs import
 ```
 
-After updating the settings, the current configuration can be dumped with
+After updating the settings, the stored configuration can be updated with
 
 ```
-yarn strapi configuration:dump
+yarn cs export
 ```
