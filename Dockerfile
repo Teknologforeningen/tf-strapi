@@ -1,7 +1,7 @@
 
-FROM node:16-alpine as build
+FROM node:18.16-alpine3.18 AS build
 # Installing libvips-dev for sharp Compatability
-RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev vips-dev && rm -rf /var/cache/apk/* > /dev/null 2>&1
+RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev vips-dev git && rm -rf /var/cache/apk/* > /dev/null 2>&1
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/
@@ -14,7 +14,7 @@ COPY ./ .
 RUN yarn build
 
 
-FROM node:16-alpine
+FROM node:18.16-alpine3.18
 RUN apk add vips-dev
 RUN rm -rf /var/cache/apk/*
 ARG NODE_ENV=production
