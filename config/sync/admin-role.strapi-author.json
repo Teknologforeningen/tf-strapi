@@ -5,13 +5,10 @@
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
       "subject": "api::homepage.homepage",
       "properties": {
-        "fields": [
-          "footer.nationlogos.url",
-          "footer.nationlogos.image",
-          "footer.nationlogos.name"
-        ]
+        "fields": []
       },
       "conditions": [
         "admin::is-creator"
@@ -19,13 +16,10 @@
     },
     {
       "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
       "subject": "api::homepage.homepage",
       "properties": {
-        "fields": [
-          "footer.nationlogos.url",
-          "footer.nationlogos.image",
-          "footer.nationlogos.name"
-        ]
+        "fields": []
       },
       "conditions": [
         "admin::is-creator"
@@ -33,13 +27,10 @@
     },
     {
       "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
       "subject": "api::homepage.homepage",
       "properties": {
-        "fields": [
-          "footer.nationlogos.url",
-          "footer.nationlogos.image",
-          "footer.nationlogos.name"
-        ]
+        "fields": []
       },
       "conditions": [
         "admin::is-creator"
@@ -47,24 +38,28 @@
     },
     {
       "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
       "subject": null,
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::upload.assets.create",
+      "actionParameters": {},
       "subject": null,
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::upload.assets.download",
+      "actionParameters": {},
       "subject": null,
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::upload.assets.update",
+      "actionParameters": {},
       "subject": null,
       "properties": {},
       "conditions": [
@@ -73,6 +68,7 @@
     },
     {
       "action": "plugin::upload.read",
+      "actionParameters": {},
       "subject": null,
       "properties": {},
       "conditions": [

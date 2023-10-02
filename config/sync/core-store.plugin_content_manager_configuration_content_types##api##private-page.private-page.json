@@ -48,6 +48,20 @@
           "sortable": true
         }
       },
+      "showTableOfContents": {
+        "edit": {
+          "label": "showTableOfContents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "showTableOfContents",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "content": {
         "edit": {
           "label": "content",
@@ -77,20 +91,6 @@
           "sortable": false
         }
       },
-      "showTableOfContents": {
-        "edit": {
-          "label": "showTableOfContents",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "showTableOfContents",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -115,6 +115,36 @@
         },
         "list": {
           "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
           "searchable": true,
           "sortable": true
         }

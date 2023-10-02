@@ -28,6 +28,9 @@
       "action": "api::file-folder.file-folder.findOne"
     },
     {
+      "action": "api::footer.footer.find"
+    },
+    {
       "action": "api::homepage.homepage.find"
     },
     {

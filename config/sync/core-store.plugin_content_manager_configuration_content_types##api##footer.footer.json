@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::plugin::users-permissions.permission",
+  "key": "plugin_content_manager_configuration_content_types::api::footer.footer",
   "value": {
-    "uid": "plugin::users-permissions.permission",
+    "uid": "api::footer.footer",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "action",
-      "defaultSortBy": "action",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,33 +20,18 @@
           "sortable": true
         }
       },
-      "action": {
+      "nationlogos": {
         "edit": {
-          "label": "action",
+          "label": "nationlogos",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "action",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "role": {
-        "edit": {
-          "label": "role",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "role",
-          "searchable": true,
-          "sortable": true
+          "label": "nationlogos",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -111,19 +96,15 @@
     "layouts": {
       "list": [
         "id",
-        "action",
-        "role",
-        "createdAt"
+        "nationlogos",
+        "createdAt",
+        "updatedAt"
       ],
       "edit": [
         [
           {
-            "name": "action",
-            "size": 6
-          },
-          {
-            "name": "role",
-            "size": 6
+            "name": "nationlogos",
+            "size": 12
           }
         ]
       ]
