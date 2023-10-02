@@ -840,7 +840,6 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    footer: Attribute.Component<'page.footer'>;
     banner: Attribute.Component<'page.banner'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
