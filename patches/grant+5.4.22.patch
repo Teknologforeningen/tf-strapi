@@ -1,8 +1,8 @@
 diff --git a/node_modules/grant/config/oauth.json b/node_modules/grant/config/oauth.json
-index da4e41b..98f9339 100644
+index 54afd00..95a9831 100644
 --- a/node_modules/grant/config/oauth.json
 +++ b/node_modules/grant/config/oauth.json
-@@ -569,8 +569,8 @@
+@@ -557,8 +557,8 @@
      "oauth": 2
    },
    "keycloak": {
@@ -14,10 +14,10 @@ index da4e41b..98f9339 100644
      "scope_delimiter": " "
    },
 diff --git a/node_modules/grant/config/profile.json b/node_modules/grant/config/profile.json
-index 365ba91..a4872bc 100644
+index c5956c1..8a4f975 100644
 --- a/node_modules/grant/config/profile.json
 +++ b/node_modules/grant/config/profile.json
-@@ -306,7 +306,7 @@
+@@ -300,7 +300,7 @@
      "profile_url": "https://kapi.kakao.com/v1/user/me"
    },
    "keycloak": {
