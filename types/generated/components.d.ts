@@ -7,7 +7,7 @@ export interface PageBanner extends Schema.Component {
     description: '';
   };
   attributes: {
-    bannerImages: Attribute.Media;
+    bannerImages: Attribute.Media<'images', true>;
   };
 }
 
@@ -30,7 +30,7 @@ export interface PageNationlogo extends Schema.Component {
   };
   attributes: {
     url: Attribute.String & Attribute.Required;
-    image: Attribute.Media & Attribute.Required;
+    image: Attribute.Media<'images'> & Attribute.Required;
     name: Attribute.String & Attribute.Required;
   };
 }
