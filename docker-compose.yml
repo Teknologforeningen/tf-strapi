@@ -1,4 +1,3 @@
-version: "3"
 services:
   db:
     image: postgres:14.5-alpine
@@ -8,3 +7,28 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_USER: strapi
       POSTGRES_DB: strapi
+    networks:
+      - db
+  strapi:
+    build: .
+    restart: on-failure
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: db
+      DATABASE_NAME: strapi
+      DATABASE_USERNAME: strapi
+      DATABASE_PORT: 5432
+      DATABASE_PASSWORD: mysecretpassword
+      JWT_SECRET: SomeJwtSecret
+      ADMIN_JWT_SECRET: AdminJwtSecret
+      APP_KEYS: AppKey1,AppKey2
+      API_TOKEN_SALT: ApiTokenSalt
+      NODE_ENV: production
+    ports:
+      - 1337:1337
+    networks:
+      - db
+
+networks:
+  db:
+    driver: bridge
