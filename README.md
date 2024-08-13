@@ -32,6 +32,30 @@ yarn
 yarn develop
 ```
 
+### Configuring keycloak
+
+To allow for single-sign on with other systems, TF identifies end-users with keycloak.
+
+1. Create a keycloak client (or look up the existing strapi client) at keycloak admin console -> Realms -> tf-medlemmar -> clients -> Create client
+2. Give the client an ID and configure relevant URL:s as follows:
+   1. Root URL: the root of your strapi instance, e.g. https://cms.tf.fi
+   2. Home URL: the root of your frontend client, e.g. https://tf.fi
+   3. Valid redirect URIs & Valid post logout redirect URIs: frontend keycloak callback path, e.g. https://tf.fi/api/auth/callback/keycloak
+   4. Web origins: allowed CORS origins, should have both the frontend and strapi origin, e.g. https://tf.fi & https://cms.tf.fi
+3. Set Capability config settings:
+   1. Client authentication: On
+   2. Authorization: Off
+   3. Authentication flow: Enable standard flow, disable all other flows.
+4. Configure credentials:
+   1. Client Authenticator: Client Id and Secret
+   2. Generate Client secret
+5. Set the recently defined keycloak variables in strapi under Settings -> Providers -> keycloak as follows:
+   1. Enable: true
+   2. Client ID: client ID from keycloak (step 2.)
+   3. Client secret fron keycloak (step 4.2)
+   4. Host URI (Subdomain): URI of the keycloak realm, e.g. id.tf.fi/realms/tf-medlemmar
+   5. The redirect URL to your front-end app: strapi keycloak callback, e.g. https://cms.tf.fi/api/auth/keycloak/callback
+
 ## Making changes to the production system
 
 1. Clone this repository
