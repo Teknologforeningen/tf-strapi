@@ -1,53 +1,53 @@
-import type { Attribute, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface PageBanner extends Schema.Component {
+export interface PageBanner extends Struct.ComponentSchema {
   collectionName: 'components_page_banners';
   info: {
     description: '';
     displayName: 'Banner';
   };
   attributes: {
-    bannerImages: Attribute.Media<'images', true>;
+    bannerImages: Schema.Attribute.Media<'images', true>;
   };
 }
 
-export interface PageFooter extends Schema.Component {
+export interface PageFooter extends Struct.ComponentSchema {
   collectionName: 'components_page_footers';
   info: {
     description: '';
     displayName: 'Footer';
   };
   attributes: {
-    nationlogos: Attribute.Component<'page.nationlogo', true>;
+    nationlogos: Schema.Attribute.Component<'page.nationlogo', true>;
   };
 }
 
-export interface PageNationlogo extends Schema.Component {
+export interface PageNationlogo extends Struct.ComponentSchema {
   collectionName: 'components_page_nationlogos';
   info: {
     description: '';
     displayName: 'Nationlogo';
   };
   attributes: {
-    image: Attribute.Media<'images'> & Attribute.Required;
-    name: Attribute.String & Attribute.Required;
-    url: Attribute.String & Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface PageNavbarLink extends Schema.Component {
+export interface PageNavbarLink extends Struct.ComponentSchema {
   collectionName: 'components_page_navbar_links';
   info: {
     displayName: 'Navbar Link';
     icon: 'link';
   };
   attributes: {
-    link: Attribute.String & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface PageNavbarMultipleLink extends Schema.Component {
+export interface PageNavbarMultipleLink extends Struct.ComponentSchema {
   collectionName: 'components_page_navbar_multiple_links';
   info: {
     description: '';
@@ -55,12 +55,13 @@ export interface PageNavbarMultipleLink extends Schema.Component {
     icon: 'layer-group';
   };
   attributes: {
-    links: Attribute.Component<'page.navbar-link', true> & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
+    links: Schema.Attribute.Component<'page.navbar-link', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface PageSidebar extends Schema.Component {
+export interface PageSidebar extends Struct.ComponentSchema {
   collectionName: 'components_page_sidebars';
   info: {
     description: '';
@@ -68,13 +69,13 @@ export interface PageSidebar extends Schema.Component {
     icon: 'text-height';
   };
   attributes: {
-    content: Attribute.RichText & Attribute.Required;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'page.banner': PageBanner;
       'page.footer': PageFooter;
       'page.nationlogo': PageNationlogo;
