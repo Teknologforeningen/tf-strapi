@@ -15,15 +15,15 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "^5.4.1",
-    "@strapi/strapi": "^5.4.1",
+    "@strapi/plugin-users-permissions": "^5.10.2",
+    "@strapi/strapi": "^5.10.2",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "pg": "^8.9.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-plugin-config-sync": "^3.0.4",
+    "strapi-plugin-config-sync": "^3.1.1",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -38,5 +38,10 @@
   },
   "strapi": {
     "uuid": "5ff545e9-37bb-4a5b-ba93-c9ba8f13dbc9"
+  },
+  "resolutions": {
+    "cookie": "^0.7.2",
+    "undici": "^6.21.1",
+    "vite": "^5.4.14"
   }
 }
