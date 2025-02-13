@@ -41,6 +41,7 @@
   },
   "resolutions": {
     "cookie": "^0.7.2",
-    "undici": "^6.21.1"
+    "undici": "^6.21.1",
+    "vite": "^5.4.14"
   }
 }
