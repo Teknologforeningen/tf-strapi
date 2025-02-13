@@ -40,6 +40,7 @@
     "uuid": "5ff545e9-37bb-4a5b-ba93-c9ba8f13dbc9"
   },
   "resolutions": {
-    "cookie": "^0.7.2"
+    "cookie": "^0.7.2",
+    "undici": "^6.21.1"
   }
 }
