@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_donation_pages",
+  "info": {
+    "displayName": "Page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "richtext"
+    },
+    "quotes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "donation.donation-quote"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "donation.faq"
+    }
+  }
+}

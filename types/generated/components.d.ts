@@ -1,5 +1,44 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface DonationDonationQuote extends Struct.ComponentSchema {
+  collectionName: 'components_donation_donation_quotes';
+  info: {
+    description: '';
+    displayName: 'Quote';
+  };
+  attributes: {
+    author: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText;
+    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface DonationFaq extends Struct.ComponentSchema {
+  collectionName: 'components_donation_faqs';
+  info: {
+    description: '';
+    displayName: 'FAQ';
+  };
+  attributes: {
+    answer: Schema.Attribute.RichText & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface DonationPage extends Struct.ComponentSchema {
+  collectionName: 'components_donation_pages';
+  info: {
+    displayName: 'Page';
+  };
+  attributes: {
+    faqs: Schema.Attribute.Component<'donation.faq', true>;
+    quotes: Schema.Attribute.Component<'donation.donation-quote', true>;
+    summary: Schema.Attribute.RichText;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface PageBanner extends Struct.ComponentSchema {
   collectionName: 'components_page_banners';
   info: {
@@ -76,6 +115,9 @@ export interface PageSidebar extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'donation.donation-quote': DonationDonationQuote;
+      'donation.faq': DonationFaq;
+      'donation.page': DonationPage;
       'page.banner': PageBanner;
       'page.footer': PageFooter;
       'page.nationlogo': PageNationlogo;

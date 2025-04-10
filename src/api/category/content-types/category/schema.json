@@ -25,6 +25,11 @@
       "relation": "oneToMany",
       "target": "api::content-page.content-page",
       "mappedBy": "category"
+    },
+    "donation_page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "donation.page"
     }
   }
 }
