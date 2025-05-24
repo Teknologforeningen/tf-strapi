@@ -8,9 +8,8 @@ export interface DonationDonationQuote extends Struct.ComponentSchema {
   };
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
-    content: Schema.Attribute.RichText;
-    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.Required;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -29,9 +28,16 @@ export interface DonationFaq extends Struct.ComponentSchema {
 export interface DonationPage extends Struct.ComponentSchema {
   collectionName: 'components_donation_pages';
   info: {
+    description: '';
     displayName: 'Page';
   };
   attributes: {
+    donation_form_info: Schema.Attribute.RichText;
+    donation_levels: Schema.Attribute.JSON;
+    donor_list_title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
     faqs: Schema.Attribute.Component<'donation.faq', true>;
     quotes: Schema.Attribute.Component<'donation.donation-quote', true>;
     summary: Schema.Attribute.RichText;

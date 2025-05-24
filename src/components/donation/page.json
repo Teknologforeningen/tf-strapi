@@ -1,7 +1,8 @@
 {
   "collectionName": "components_donation_pages",
   "info": {
-    "displayName": "Page"
+    "displayName": "Page",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -21,6 +22,17 @@
       "type": "component",
       "repeatable": true,
       "component": "donation.faq"
+    },
+    "donor_list_title": {
+      "type": "string",
+      "maxLength": 80,
+      "unique": false
+    },
+    "donation_form_info": {
+      "type": "richtext"
+    },
+    "donation_levels": {
+      "type": "json"
     }
   }
 }
